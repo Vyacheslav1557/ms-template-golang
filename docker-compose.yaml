@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:7600"
+    environment:
+      - ENV=dev
+      - HOST=0.0.0.0
+      - PORT=7600

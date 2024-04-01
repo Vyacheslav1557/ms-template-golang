@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package sample;
+
+service SampleService {
+  rpc SayHello(HelloRequest) returns (HelloResponse);
+  rpc Count(stream CountRequest) returns (stream CountResponse);
+}
+
+message HelloRequest{
+  string Name = 1;
+}
+
+message HelloResponse{
+  string Greeting = 1;
+}
+
+message CountRequest{
+  string Name = 1;
+}
+
+message CountResponse{
+  string Greeting = 1;
+  int64 Count = 2;
+}
